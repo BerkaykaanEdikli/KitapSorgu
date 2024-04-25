@@ -1,0 +1,8 @@
+﻿@model KitapSorgu.Models.Kitap;
+<p><b>Kitap Adı:</b> @Model.KitapAdi</p>
+<p><b>Kitap Yazar:</b> @Model.KitapYazari</p>
+<p><b>Kitap Türü:</b>@Model.KitapTur</p>
+<p><b>Yayın Evi:</b> @Model.YayinEvi</p>
+<form asp-controller="kitap" asp-action="SilOnay" method="post" asp-route-id="@Model.KitapId">
+    <button class="btn btn-danger">SİL</button>
+</form>

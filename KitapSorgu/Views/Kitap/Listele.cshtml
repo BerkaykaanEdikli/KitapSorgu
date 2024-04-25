@@ -1,0 +1,32 @@
+﻿@model IList<KitapSorgu.Models.Kitap>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Kitap ID</th>
+            <th>Kitap Adı</th>
+            <th>Kitap Yazarı </th>
+            <th>Kitap Türü</th>
+            <th>Yayınevi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.KitapAdi</td>
+                <td>@item.KitapYazari</td>
+                <td>@item.KitapTur</td>
+                <td>@item.YayinEvi</td>
+                <td>
+                    <a asp-controller="Kitap" asp-action="Guncelle" asp-route-id="@item.KitapId">
+                    
+                        Güncelle
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="kitap" asp-action="sil" asp-route-id="@item.KitapId">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

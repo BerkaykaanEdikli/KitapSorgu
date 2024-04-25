@@ -1,0 +1,24 @@
+﻿@model KitapSorgu.Models.Kitap;
+<form asp-controller="Kitap" asp-action="Ekle" method="post">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="KitapAdi"></label>
+        <input asp-for="KitapAdi" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="KitapYazari"></label>
+        <input asp-for="KitapYazari" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="KitapTur"></label>
+        <input asp-for="KitapTur" class="form-control">
+    </div>
+    <div class="form-group">
+        <label asp-for="YayinEvi"></label>
+        <input asp-for="YayinEvi" class="form-control">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary"> Kaydet</button>
+    </div>
+</form>
+
